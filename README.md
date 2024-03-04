@@ -1,35 +1,22 @@
-# vue-film
+# Project Vue-Film
 
-This template should help get you started developing with Vue 3 in Vite.
+Проект представляет собой сервис по покупке билетов в кинотеатр. В нем реализована возможность:
 
-## Recommended IDE Setup
+- просмотра доступных фильмов (при помощи пагинации)
+- выбора одного из фильмов с выводом более подробной информации о нем
+- выбор доступного времени и места (купленные ранее места недоступны к выбору и имеют соответствующую стилизацию)
+- удаление неактуальных билетов из корзины
+- оформление билетов с вводом данных в поля email и tel (реализована кастомная валидация)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Стек технологий
 
-## Customize configuration
+- Vue 3
+- TailwindCSS
+- Axios
+- Composition API
+- ESLint
+- Prettier
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Ссылка на проект
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Задеплоенный рабочий проект доступен по [ссылке](https://vue-sneakers-smoky.vercel.app/)
