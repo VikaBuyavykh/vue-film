@@ -1,0 +1,2780 @@
+[
+  {
+    "id": 1,
+    "date": "17 марта",
+    "times": [
+      {
+        "time": "10:00",
+        "rows": [
+          {
+            "row": "1",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": true
+              },
+              {
+                "place": "2",
+                "isOccupied": true
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "2",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "3",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "4",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "5",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "time": "13:30",
+        "rows": [
+          {
+            "row": "1",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "2",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "3",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "4",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "5",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "time": "17:45",
+        "rows": [
+          {
+            "row": "1",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "2",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "3",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "4",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "5",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "time": "21:30",
+        "rows": [
+          {
+            "row": "1",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "2",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "3",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "4",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "5",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "date": "22 марта",
+    "times": [
+      {
+        "time": "10:00",
+        "rows": [
+          {
+            "row": "1",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "2",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "3",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "4",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "5",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "time": "13:30",
+        "rows": [
+          {
+            "row": "1",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "2",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "3",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "4",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "5",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "time": "17:45",
+        "rows": [
+          {
+            "row": "1",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "2",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "3",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "4",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "5",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "time": "21:30",
+        "rows": [
+          {
+            "row": "1",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "2",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "3",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "4",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "5",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "date": "28 марта",
+    "times": [
+      {
+        "time": "10:00",
+        "rows": [
+          {
+            "row": "1",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "2",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "3",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "4",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "5",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "time": "13:30",
+        "rows": [
+          {
+            "row": "1",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "2",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "3",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "4",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "5",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "time": "17:45",
+        "rows": [
+          {
+            "row": "1",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "2",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "3",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "4",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "5",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "time": "21:30",
+        "rows": [
+          {
+            "row": "1",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "2",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "3",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "4",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          },
+          {
+            "row": "5",
+            "places": [
+              {
+                "place": "1",
+                "isOccupied": false
+              },
+              {
+                "place": "2",
+                "isOccupied": false
+              },
+              {
+                "place": "3",
+                "isOccupied": false
+              },
+              {
+                "place": "4",
+                "isOccupied": false
+              },
+              {
+                "place": "5",
+                "isOccupied": false
+              },
+              {
+                "place": "6",
+                "isOccupied": false
+              },
+              {
+                "place": "7",
+                "isOccupied": false
+              },
+              {
+                "place": "8",
+                "isOccupied": false
+              },
+              {
+                "place": "9",
+                "isOccupied": false
+              },
+              {
+                "place": "10",
+                "isOccupied": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
