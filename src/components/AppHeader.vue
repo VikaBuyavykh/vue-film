@@ -30,7 +30,7 @@ function handleClick() {
     </button>
     <a
       href="https://github.com/VikaBuyavykh"
-      class="text-white opacity-40 cursor-pointer transition hover:opacity-100 text-xs sm:text-sm md:text-lg"
+      class="text-white opacity-40 cursor-pointer transition hover:opacity-100 sm:text-sm md:text-lg"
       target="_blank"
     >
       Buyavykh | 2024
