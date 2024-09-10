@@ -8,7 +8,7 @@ defineProps({
 
 <template>
   <div class="flex gap-5 text-xs sm:text-sm md:text-base text-white">
-    <p class="">
+    <p>
       <img src="/star.svg" alt="Иконка рейтинга" class="inline w-2.5 mr-1.5 mb-1" />{{ rating }}
     </p>
     <p>{{ director }}</p>

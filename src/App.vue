@@ -1,31 +1,23 @@
 <script setup>
-import { onMounted, provide, ref, watch } from 'vue'
-import axios from 'axios'
-import Header from './components/Header.vue'
-import Cover from './components/Cover.vue'
-import Cards from './components/Cards.vue'
-import Drawer from './components/Drawer.vue'
+import { onMounted, ref, watch, toRefs } from 'vue'
+import { useFilmStore } from '@/store/film'
+import AppHeader from '@/components/AppHeader.vue'
+import AppCover from '@/components/AppCover.vue'
+import AppCards from '@/components/AppCards.vue'
+import AppCart from '@/components/AppCart.vue'
+
+//drawer
 
 const isDrawerOpen = ref(false)
-const films = ref([])
-const page = ref(1)
-const pagesNumber = ref(0)
-const chosenFilm = ref({})
 
 function handleDrawer() {
-  isDrawerOpen.value ? (isDrawerOpen.value = false) : (isDrawerOpen.value = true)
+  isDrawerOpen.value = !isDrawerOpen.value
 }
-async function getFilms(page) {
-  try {
-    const { data } = await axios.get(
-      `https://f3f76ea5491c3712.mokky.dev/films?page=${page}&limit=6`
-    )
-    films.value = data.items
-    pagesNumber.value = data.meta.total_pages
-  } catch (error) {
-    console.log(error)
-  }
-}
+
+//film
+
+const { films, chosenFilm, page, pagesNumber } = toRefs(useFilmStore())
+const { getFilms, setChosenFilm, setPage } = useFilmStore()
 
 watch(page, async () => {
   await getFilms(page.value)
@@ -33,26 +25,31 @@ watch(page, async () => {
 
 onMounted(async () => {
   await getFilms(page.value)
-  chosenFilm.value = films.value[0]
+  setChosenFilm(1)
 })
-
-provide('app', { page, chosenFilm, films })
 </script>
 
 <template>
   <div class="flex flex-col">
-    <Header :onClickOpen="handleDrawer" />
+    <AppHeader @on-open="handleDrawer" />
     <main>
-      <Cover :chosenFilm="chosenFilm" :onClickOpen="handleDrawer" />
-      <Cards :films="films" :pagesNumber="pagesNumber" />
+      <AppCover :chosen-film @on-click-open="handleDrawer" />
+      <AppCards
+        :films
+        :pages-number
+        :page
+        :chosen-film
+        @set-page="setPage"
+        @set-chosen-film="setChosenFilm"
+      />
       <transition name="fade">
-        <Drawer v-if="isDrawerOpen" :onClickClose="handleDrawer" :chosenFilm="chosenFilm" />
+        <AppCart v-if="isDrawerOpen" @on-close="handleDrawer" :chosen-film />
       </transition>
     </main>
   </div>
 </template>
 
-<style scoped>
+<style>
 .fade-enter-active {
   animation: fade 0.5s forwards ease;
 }
@@ -67,5 +64,24 @@ provide('app', { page, chosenFilm, films })
   to {
     opacity: 1;
   }
+}
+
+.scrollbar-element::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollbar-horizontal::-webkit-scrollbar {
+  height: 5px;
+}
+
+.scrollbar-element::-webkit-scrollbar-track,
+.scrollbar-horizontal::-webkit-scrollbar-track {
+  background-color: #cac4b0;
+}
+
+.scrollbar-element::-webkit-scrollbar-thumb,
+.scrollbar-horizontal::-webkit-scrollbar-thumb {
+  background-color: #131824;
+  border-radius: 20px;
 }
 </style>
