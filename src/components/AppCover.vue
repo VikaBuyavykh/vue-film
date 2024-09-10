@@ -1,17 +1,22 @@
 <script setup>
+import { computed } from 'vue'
 import AppMovieInfo from '@/components/AppMovieInfo.vue'
 
-defineProps({
+const props = defineProps({
   chosenFilm: Object
 })
 
 defineEmits(['onClickOpen'])
+
+const imagePath = computed(
+  () => new URL(`/src/assets/images/${props.chosenFilm.cover}`, import.meta.url).href
+)
 </script>
 
 <template>
   <section
     v-if="chosenFilm"
-    :style="`background-image: url('/src/assets/images/${chosenFilm.cover}')`"
+    :style="`background-image: url(${imagePath})`"
     class="bg-image w-full min-w-72 flex"
   >
     <div class="bg-gradient h-full w-full">
