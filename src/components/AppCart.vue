@@ -1,6 +1,6 @@
 <script setup>
-import { toRefs, onMounted, onUnmounted } from 'vue'
-import { useCartStore } from '@/store/cart'
+import { onUnmounted } from 'vue'
+
 import TimeSection from '@/components/sections/TimeSection.vue'
 import PlaceSection from '@/components/sections/PlaceSection.vue'
 import OrderSection from '@/components/sections/OrderSection.vue'
@@ -8,25 +8,15 @@ import FormSection from '@/components/sections/FormSection.vue'
 import SuccessSection from '@/components/sections/SuccessSection.vue'
 
 defineProps({
-  chosenFilm: Object
+  chosenFilm: Object,
+  section: String,
+  sessions: Array,
+  chosenTime: Object
 })
 
-defineEmits(['onClose'])
+const emit = defineEmits(['onClose', 'setSection'])
 
-const { section, sessions, chosenTime } = toRefs(useCartStore())
-const { getSessions, setSessions, setSection } = useCartStore()
-
-onMounted(async () => {
-  const savedSessions = JSON.parse(localStorage.getItem('sessions'))
-  if (savedSessions) {
-    setSessions(savedSessions)
-  } else {
-    await getSessions()
-    localStorage.setItem('sessions', JSON.stringify(sessions.value))
-  }
-})
-
-onUnmounted(() => setSection('time'))
+onUnmounted(() => emit('setSection', 'time'))
 </script>
 
 <template>

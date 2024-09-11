@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import AppMovieInfo from '@/components/AppMovieInfo.vue'
+import UIButton from '@/components/UI/UIButton.vue'
 
 const props = defineProps({
   chosenFilm: Object
@@ -34,12 +35,11 @@ const imagePath = computed(
         >
           {{ chosenFilm.description }}
         </p>
-        <button
+        <UIButton
           @click="$emit('onClickOpen')"
-          class="cursor-pointer bg-white hover:bg-orange-300 active:bg-orange-400 transition rounded-xl w-1/3 sm:w-2/5 md:w-1/4 py-2 text-cyan-900 text-xs sm:text-sm md:text-base"
+          class="w-1/3 sm:w-2/5 md:w-1/4 py-2 text-xs sm:text-sm md:text-base"
+          >Купить билет</UIButton
         >
-          Купить билет
-        </button>
       </div>
     </div>
   </section>
@@ -47,7 +47,7 @@ const imagePath = computed(
 
 <style scoped>
 .h-50vh {
-  height: 50vh;
+  height: 55vh;
 }
 
 .bg-image {

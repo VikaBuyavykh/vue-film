@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref, watch, toRefs } from 'vue'
 import { useFilmStore } from '@/store/film'
+import { useCartStore } from '@/store/cart'
 import AppHeader from '@/components/AppHeader.vue'
 import AppCover from '@/components/AppCover.vue'
 import AppCards from '@/components/AppCards.vue'
@@ -27,6 +28,21 @@ onMounted(async () => {
   await getFilms(page.value)
   setChosenFilm(1)
 })
+
+//sessions
+
+const { section, sessions, chosenTime } = toRefs(useCartStore())
+const { getSessions, setSessions, setSection } = useCartStore()
+
+onMounted(async () => {
+  const savedSessions = JSON.parse(localStorage.getItem('sessions'))
+  if (savedSessions) {
+    setSessions(savedSessions)
+  } else {
+    await getSessions()
+    localStorage.setItem('sessions', JSON.stringify(sessions.value))
+  }
+})
 </script>
 
 <template>
@@ -43,7 +59,15 @@ onMounted(async () => {
         @set-chosen-film="setChosenFilm"
       />
       <transition name="fade">
-        <AppCart v-if="isDrawerOpen" @on-close="handleDrawer" :chosen-film />
+        <AppCart
+          v-if="isDrawerOpen"
+          :section
+          :sessions
+          :chosen-film
+          :chosen-time
+          @on-close="handleDrawer"
+          @set-section="setSection"
+        />
       </transition>
     </main>
   </div>

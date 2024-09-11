@@ -21,7 +21,7 @@ const { chosenPlaces, isButtonDisabled, totalPriceText, handleDelete } = useOrde
     <template #desc>{{ chosenFilm.title }}, {{ chosenTime.date }}, {{ chosenTime.time }}</template>
     <template #button>Оформить</template>
     <template #main>
-      <ul class="flex flex-col gap-3 grow mt-5 pr-1 overflow-y-scroll scrollbar-element">
+      <ul class="flex flex-col gap-3 grow mt-5 pr-1 overflow-y-auto scrollbar-element">
         <li
           v-for="place in chosenPlaces"
           :key="place"
