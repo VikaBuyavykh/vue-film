@@ -1,4 +1,4 @@
-import { computed, ref, toRefs } from 'vue'
+import { computed, onMounted, ref, toRefs } from 'vue'
 import { useCartStore } from '@/store/cart'
 
 export function useTimeChoice() {
@@ -35,6 +35,13 @@ export function useTimeChoice() {
     setPlacesData([])
     localStorage.removeItem('placesData')
   }
+
+  onMounted(() => {
+    const savedTimeData = JSON.parse(localStorage.getItem('timeData'))
+    if (savedTimeData) {
+      setTimeData(savedTimeData)
+    }
+  })
 
   return {
     timeData,
