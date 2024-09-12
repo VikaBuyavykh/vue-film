@@ -14,7 +14,22 @@ const props = defineProps({
 
 const emit = defineEmits(['choosePlace', 'setPlacesData'])
 
+function highPriceFilter(places) {
+  return places.map((row) =>
+    row.row > 1 && row.row < 5
+      ? {
+          ...row,
+          places: row.places.map((place) =>
+            place.place > 3 && place.place < 8 ? { ...place, highPriced: true } : place
+          )
+        }
+      : row
+  )
+}
+
 onMounted(() => {
+  console.log(highPriceFilter(props.placesData))
+
   const savedPlacesData = JSON.parse(localStorage.getItem('placesData'))
   if (savedPlacesData) {
     emit('setPlacesData', savedPlacesData)
@@ -48,9 +63,13 @@ onMounted(() => {
     <template #button>Далее</template>
     <template #main>
       <div class="flex flex-col gap-3 overflow-x-auto scrollbar-horizontal grow justify-end mb-5">
+        <div class="flex justify-center gap-3">
+          <span class="h-5 px-4 flex items-center text-center bg-slate-600 text-xs">350 руб.</span>
+          <span class="h-5 px-4 flex items-center text-center highPriced text-xs">450 руб.</span>
+        </div>
         <div class="bg-slate-900 w-392 h-6 text-center rounded-xl text-xs pt-1 ml-10">Экран</div>
         <ul class="flex flex-col gap-3">
-          <li v-for="row in placesData" :key="row.row" class="flex flex-row gap-2">
+          <li v-for="row in highPriceFilter(placesData)" :key="row.row" class="flex flex-row gap-2">
             <span class="text-xs mt-1 mr-1 text-nowrap">Ряд {{ row.row }}</span>
             <div class="place">
               <button
@@ -59,7 +78,7 @@ onMounted(() => {
                 v-for="place in row.places"
                 :key="place.place"
                 :disabled="place.isOccupied"
-                :class="{ selected: place.selected }"
+                :class="{ selected: place.selected, highPriced: place.highPriced }"
                 class="h-6 w-8 text-center bg-slate-600 rounded-xl text-xs cursor-pointer hover:bg-slate-500 hover:-translate-y-0.5 transition active:bg-slate-400 disabled:opacity-20 disabled:cursor-default disabled:translate-y-0"
               >
                 {{ place.place }}
@@ -85,5 +104,9 @@ onMounted(() => {
 
 .selected {
   border: 1px solid #f0bc7d;
+}
+
+.highPriced {
+  background-color: rgba(188, 143, 143, 0.5);
 }
 </style>
