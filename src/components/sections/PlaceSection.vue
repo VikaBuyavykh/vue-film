@@ -63,7 +63,7 @@ onMounted(() => {
     <template #button>Далее</template>
     <template #main>
       <div class="flex flex-col gap-3 overflow-x-auto scrollbar-horizontal grow justify-end mb-5">
-        <div class="flex justify-center gap-3">
+        <div class="flex justify-start ml-10 gap-3">
           <span class="h-5 px-4 flex items-center text-center bg-slate-600 text-xs">350 руб.</span>
           <span class="h-5 px-4 flex items-center text-center highPriced text-xs">450 руб.</span>
         </div>
