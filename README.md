@@ -15,7 +15,7 @@
 - Сomposition API и Script Setup
 - компонентный подход, named и conditional slots
 - работа с реактивностью, отслеживанием, computed
-- макросы компиляции: defineProps, defineEmits, defineModel
+- макросы компиляции: defineProps, defineEmits, defineModel, defineExpose
 - работа с формами и асинхронным кодом
 - хуки жизненного цикла
 - Composables

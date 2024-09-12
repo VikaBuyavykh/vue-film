@@ -115,6 +115,7 @@ onMounted(async () => {
           :is-places-button-disabled
           :selected-places-text
           @set-places-data="setPlacesData"
+          @set-time-data="setTimeData"
           @choose-time="chooseTime"
           @choose-place="choosePlace"
           @on-close="handleCart"

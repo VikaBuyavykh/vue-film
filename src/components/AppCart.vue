@@ -21,7 +21,14 @@ defineProps({
   selectedPlacesText: String
 })
 
-const emit = defineEmits(['onClose', 'setSection', 'chooseTime', 'choosePlace', 'setPlacesData'])
+const emit = defineEmits([
+  'onClose',
+  'setSection',
+  'chooseTime',
+  'choosePlace',
+  'setPlacesData',
+  'setTimeData'
+])
 
 onUnmounted(() => emit('setSection', 'time'))
 </script>
@@ -43,10 +50,12 @@ onUnmounted(() => emit('setSection', 'time'))
       />
       <TimeSection
         v-if="section === 'time'"
+        :sessions
         :chosen-film
         :time-data
         :time-error
         :is-time-button-disabled
+        @set-time-data="$emit('setTimeData', $event)"
         @choose-time="$emit('chooseTime', $event)"
       />
       <PlaceSection

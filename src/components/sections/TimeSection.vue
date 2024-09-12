@@ -1,15 +1,33 @@
 <script setup>
+import { onMounted } from 'vue'
 import AppMovieInfo from '@/components/AppMovieInfo.vue'
 import UICartContent from '@/components/UI/UICartContent.vue'
 
-defineProps({
+const props = defineProps({
+  sessions: Array,
   chosenFilm: Object,
   timeData: Array,
   timeError: String,
   isTimeButtonDisabled: Boolean
 })
 
-defineEmits(['chooseTime'])
+const emit = defineEmits(['chooseTime', 'setTimeData'])
+
+onMounted(() => {
+  const savedTimeData = JSON.parse(localStorage.getItem('timeData'))
+
+  if (savedTimeData) {
+    emit('setTimeData', savedTimeData)
+  } else {
+    emit(
+      'setTimeData',
+      props.sessions.map((date) => ({
+        ...date,
+        times: date.times.map((time) => ({ time: time.time }))
+      }))
+    )
+  }
+})
 </script>
 
 <template>
