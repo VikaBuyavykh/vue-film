@@ -1,74 +1,58 @@
-import { computed, toRefs } from 'vue'
+import { computed, onMounted, toRefs } from 'vue'
 import { useCartStore } from '@/store/cart'
 
 export function usePlaceChoice() {
-  const { sessions, chosenTime, chosenPlaces } = toRefs(useCartStore())
-  const { setSessions } = useCartStore()
+  const { placesData, selectedPlaces, selectedTime } = toRefs(useCartStore())
+  const { setPlacesData } = useCartStore()
 
-  const isButtonDisabled = computed(() => chosenPlaces.value.length === 0)
-  const error = computed(() => (chosenPlaces.value.length === 0 ? 'Выберите место' : null))
-  const chosenPlacesText = computed(() =>
-    chosenPlaces.value.length === 0
+  const isPlacesButtonDisabled = computed(() => selectedPlaces.value.length === 0)
+  const placesError = computed(() => (selectedPlaces.value.length === 0 ? 'Выберите место' : null))
+  const selectedPlacesText = computed(() =>
+    selectedPlaces.value.length === 0
       ? null
-      : chosenPlaces.value.map((item) => `Ряд ${item.row}, место ${item.place}`).join('/')
+      : selectedPlaces.value.map((item) => `Ряд ${item.row}, место ${item.place}`).join('/')
   )
 
-  const hallData = computed(() => {
-    let places = []
-    const data = sessions.value
-      .find((item) => item.date === chosenTime.value.date)
-      .times.find((item) => item.time === chosenTime.value.time).rows
-    if (data) places = data
-    return places
-  })
-
-  function handleChoosePlace(e) {
+  function choosePlace(e) {
     let row = e.target.closest('.flex').children[0].textContent.slice(4)
     let place = e.target.textContent
     let placeToUnset = null
-
-    if (chosenPlaces.value.some((item) => item.row === row && item.place === place)) {
+    if (selectedPlaces.value.some((item) => item.row === row && item.place === place)) {
       placeToUnset = place
     }
-
-    setSessions(
-      sessions.value.map((item) =>
-        item.date !== chosenTime.value.date
+    setPlacesData(
+      placesData.value.map((item) =>
+        item.row !== row
           ? item
           : {
               ...item,
-              times: item.times.map((item) =>
-                item.time !== chosenTime.value.time
+              places: item.places.map((item) =>
+                item.place !== place
                   ? item
-                  : {
-                      ...item,
-                      rows: item.rows.map((item) =>
-                        item.row !== row
-                          ? item
-                          : {
-                              ...item,
-                              places: item.places.map((item) =>
-                                item.place !== place
-                                  ? item
-                                  : item.place === placeToUnset
-                                    ? { ...item, selected: false }
-                                    : { ...item, selected: true }
-                              )
-                            }
-                      )
-                    }
+                  : item.place === placeToUnset
+                    ? { ...item, selected: false }
+                    : { ...item, selected: true }
               )
             }
       )
     )
-    localStorage.setItem('sessions', JSON.stringify(sessions.value))
+    localStorage.setItem('placesData', JSON.stringify(placesData.value))
   }
 
+  onMounted(() => {
+    const savedPlacesData = JSON.parse(localStorage.getItem('placesData'))
+    if (savedPlacesData) {
+      setPlacesData(savedPlacesData)
+    }
+  })
+
   return {
-    hallData,
-    handleChoosePlace,
-    isButtonDisabled,
-    error,
-    chosenPlacesText
+    placesData,
+    setPlacesData,
+    selectedTime,
+    choosePlace,
+    isPlacesButtonDisabled,
+    placesError,
+    selectedPlacesText
   }
 }

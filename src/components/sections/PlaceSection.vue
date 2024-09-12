@@ -1,36 +1,61 @@
 <script setup>
-import { usePlaceChoice } from '@/composables/usePlaceChoice'
+import { onMounted } from 'vue'
 import UICartContent from '@/components/UI/UICartContent.vue'
 
-defineProps({
+const props = defineProps({
+  sessions: Array,
   chosenFilm: Object,
-  chosenTime: Object
+  placesData: Array,
+  selectedTime: Object,
+  placesError: String,
+  isPlacesButtonDisabled: Boolean,
+  selectedPlacesText: String
 })
 
-const { hallData, handleChoosePlace, error, isButtonDisabled, chosenPlacesText } = usePlaceChoice()
+const emit = defineEmits(['choosePlace', 'setPlacesData'])
+
+onMounted(() => {
+  const savedPlacesData = JSON.parse(localStorage.getItem('placesData'))
+  if (savedPlacesData) {
+    emit('setPlacesData', savedPlacesData)
+  } else {
+    emit(
+      'setPlacesData',
+      props.sessions
+        .find((item) => item.date === props.selectedTime.date)
+        .times.find((item) => item.time === props.selectedTime.time)
+        .rows.map((item) => ({
+          row: item.row,
+          places: item.places.map((item) => ({ place: item.place, isOccupied: item.isOccupied }))
+        }))
+    )
+  }
+})
 </script>
 
 <template>
   <UICartContent
     next-section="order"
     prev-section="time"
-    :error
-    :is-button-disabled
-    :text="chosenPlacesText"
+    :error="placesError"
+    :is-button-disabled="isPlacesButtonDisabled"
+    :text="selectedPlacesText"
   >
     <template #title>Выберите место</template>
-    <template #desc>{{ chosenFilm.title }}, {{ chosenTime.date }}, {{ chosenTime.time }}</template>
+    <template #desc
+      >{{ chosenFilm.title }}, {{ selectedTime.date }}, {{ selectedTime.time }}</template
+    >
     <template #button>Далее</template>
     <template #main>
       <div class="flex flex-col gap-3 overflow-x-auto scrollbar-horizontal grow justify-end mb-5">
         <div class="bg-slate-900 w-392 h-6 text-center rounded-xl text-xs pt-1 ml-10">Экран</div>
         <ul class="flex flex-col gap-3">
-          <li v-for="row in hallData" :key="row.row" class="flex flex-row gap-2">
+          <li v-for="row in placesData" :key="row.row" class="flex flex-row gap-2">
             <span class="text-xs mt-1 mr-1 text-nowrap">Ряд {{ row.row }}</span>
             <div class="place">
               <button
                 type="button"
-                @click="handleChoosePlace($event)"
+                @click="$emit('choosePlace', $event)"
                 v-for="place in row.places"
                 :key="place.place"
                 :disabled="place.isOccupied"

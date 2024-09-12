@@ -8,13 +8,20 @@ import FormSection from '@/components/sections/FormSection.vue'
 import SuccessSection from '@/components/sections/SuccessSection.vue'
 
 defineProps({
+  sessions: Array,
   chosenFilm: Object,
   section: String,
-  sessions: Array,
-  chosenTime: Object
+  timeData: Array,
+  timeError: String,
+  isTimeButtonDisabled: Boolean,
+  placesData: Array,
+  selectedTime: Object,
+  placesError: String,
+  isPlacesButtonDisabled: Boolean,
+  selectedPlacesText: String
 })
 
-const emit = defineEmits(['onClose', 'setSection'])
+const emit = defineEmits(['onClose', 'setSection', 'chooseTime', 'choosePlace', 'setPlacesData'])
 
 onUnmounted(() => emit('setSection', 'time'))
 </script>
@@ -34,10 +41,28 @@ onUnmounted(() => emit('setSection', 'time'))
         src="/close.svg"
         alt="Иконка закрытия"
       />
-      <TimeSection v-if="section === 'time'" :chosen-film :sessions />
-      <PlaceSection v-else-if="section === 'place'" :chosen-film :chosen-time />
-      <OrderSection v-else-if="section === 'order'" :chosen-film :chosen-time />
-      <FormSection v-else-if="section === 'form'" :chosen-film :chosen-time />
+      <TimeSection
+        v-if="section === 'time'"
+        :chosen-film
+        :time-data
+        :time-error
+        :is-time-button-disabled
+        @choose-time="$emit('chooseTime', $event)"
+      />
+      <PlaceSection
+        v-else-if="section === 'place'"
+        :sessions
+        :chosen-film
+        :places-data
+        :selected-time
+        :places-error
+        :is-places-button-disabled
+        :selected-places-text
+        @set-places-data="$emit('setPlacesData', $event)"
+        @choose-place="$emit('choosePlace', $event)"
+      />
+      <OrderSection v-else-if="section === 'order'" :chosen-film />
+      <FormSection v-else-if="section === 'form'" :chosen-film />
       <SuccessSection v-else-if="section === 'success'" @on-close="$emit('onClose')" />
     </div>
   </div>

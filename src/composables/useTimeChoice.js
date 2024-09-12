@@ -1,41 +1,61 @@
-import { computed, ref, toRefs } from 'vue'
+import { computed, onMounted, ref, toRefs } from 'vue'
 import { useCartStore } from '@/store/cart'
 
 export function useTimeChoice() {
-  const { sessions, chosenTime } = toRefs(useCartStore())
-  const { setSessions } = useCartStore()
+  const { timeData, selectedTime, sessions } = toRefs(useCartStore())
+  const { setTimeData, setPlacesData } = useCartStore()
 
-  const error = ref(null)
-  const isButtonDisabled = computed(() => !chosenTime.value.time)
+  const timeError = ref(null)
+  const isTimeButtonDisabled = computed(() => !selectedTime.value.time)
 
-  function handleChooseTime(e) {
+  function chooseTime(e) {
     let date = e.target.closest('.flex').children[0].textContent
     let time = e.target.textContent
-    if (date === chosenTime.value.date && time === chosenTime.value.time) {
+    if (date === selectedTime.value.date && time === selectedTime.value.time) {
       date = null
       time = null
-      error.value = 'Выберите дату и время'
+      timeError.value = 'Выберите дату и время'
     } else {
-      error.value = null
+      timeError.value = null
     }
-    setSessions(
-      sessions.value.map((item) =>
-        item.date !== date
-          ? { ...item, times: item.times.map((item) => ({ ...item, selected: false })) }
-          : {
+
+    setTimeData(
+      timeData.value.map((item) =>
+        item.date === date
+          ? {
               ...item,
               times: item.times.map((item) =>
-                item.time !== time ? { ...item, selected: false } : { ...item, selected: true }
+                item.time === time ? { ...item, selected: true } : { ...item, selected: false }
               )
             }
+          : { ...item, times: item.times.map((item) => ({ ...item, selected: false })) }
       )
     )
-    localStorage.setItem('sessions', JSON.stringify(sessions.value))
+    localStorage.setItem('timeData', JSON.stringify(timeData.value))
+    setPlacesData([])
+    localStorage.removeItem('placesData')
   }
 
+  onMounted(() => {
+    const savedTimeData = JSON.parse(localStorage.getItem('timeData'))
+
+    if (savedTimeData) {
+      setTimeData(savedTimeData)
+    } else {
+      setTimeData(
+        sessions.value.map((date) => ({
+          ...date,
+          times: date.times.map((time) => ({ time: time.time }))
+        }))
+      )
+    }
+  })
+
   return {
-    handleChooseTime,
-    error,
-    isButtonDisabled
+    timeData,
+    setTimeData,
+    chooseTime,
+    timeError,
+    isTimeButtonDisabled
   }
 }

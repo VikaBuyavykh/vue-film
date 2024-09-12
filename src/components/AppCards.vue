@@ -1,14 +1,21 @@
 <script setup>
 import AppCard from '@/components/AppCard.vue'
 
-defineProps({
+const props = defineProps({
   films: Array,
   page: Number,
   pagesNumber: Number,
-  chosenFilm: Object
+  observedFilm: Object
 })
 
-defineEmits(['setPage', 'setChosenFilm'])
+const emit = defineEmits(['setPage', 'setObservedFilm'])
+
+function handleClick(string) {
+  let number = props.page
+  string === 'next' ? number++ : number--
+  emit('setPage', number)
+  localStorage.setItem('page', number)
+}
 </script>
 
 <template>
@@ -22,20 +29,20 @@ defineEmits(['setPage', 'setChosenFilm'])
           :title="film.title"
           :image-url="film.cover"
           :small-image-url="film.coverSmall"
-          :chosen-film
-          @set-chosen-film="$emit('setChosenFilm', $event)"
+          :observed-film
+          @set-observed-film="$emit('setObservedFilm', $event)"
         />
       </ul>
       <img
         v-if="page < pagesNumber"
-        @click="$emit('setPage', page + 1)"
+        @click="handleClick('next')"
         src="/arrow.svg"
         alt="Иконка переключения карточек вперед"
         class="w-6 sm:w-10 absolute top-0 bottom-0 m-auto -right-8 sm:-right-20 cursor-pointer transition hover:opacity-40 hover:translate-x-0.5"
       />
       <img
         v-if="page > 1 && page <= pagesNumber"
-        @click="$emit('setPage', page - 1)"
+        @click="handleClick('prev')"
         src="/arrow.svg"
         alt="Иконка переключения карточек назад"
         class="rotate-180 w-6 sm:w-10 absolute top-0 bottom-0 m-auto -left-8 sm:-left-20 cursor-pointer transition hover:opacity-40 hover:-translate-x-0.5"

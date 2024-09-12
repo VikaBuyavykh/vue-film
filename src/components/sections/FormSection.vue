@@ -4,12 +4,19 @@ import { handleInput } from '@/utils/handleInput'
 import UICartContent from '@/components/UI/UICartContent.vue'
 
 const props = defineProps({
-  chosenFilm: Object,
-  chosenTime: Object
+  chosenFilm: Object
 })
 
-const { email, tel, isButtonDisabled, totalPriceText, checkValidity, handleSubmit, errorApi } =
-  useForm(props.chosenFilm)
+const {
+  email,
+  tel,
+  selectedTime,
+  checkValidity,
+  handleSubmit,
+  isButtonDisabled,
+  totalPriceText,
+  errorApi
+} = useForm(props.chosenFilm)
 </script>
 
 <template>
@@ -21,7 +28,9 @@ const { email, tel, isButtonDisabled, totalPriceText, checkValidity, handleSubmi
     :error="errorApi"
   >
     <template #title>Оформление заказа</template>
-    <template #desc>{{ chosenFilm.title }}, {{ chosenTime.date }}, {{ chosenTime.time }}</template>
+    <template #desc
+      >{{ chosenFilm.title }}, {{ selectedTime.date }}, {{ selectedTime.time }}</template
+    >
     <template #button>Оплатить</template>
     <template #main>
       <div class="grow">

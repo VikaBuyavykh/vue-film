@@ -4,7 +4,7 @@ import { useCartStore } from '@/store/cart'
 
 const emit = defineEmits(['onOpen'])
 
-const { chosenPlaces } = toRefs(useCartStore())
+const { selectedPlaces } = toRefs(useCartStore())
 const { setSection } = useCartStore()
 
 function handleClick() {
@@ -19,13 +19,13 @@ function handleClick() {
   >
     <img class="w-20 sm:w-24 lg:w-28" src="/logo.svg" alt="Логотип" />
     <button
-      :disabled="chosenPlaces.length === 0"
+      :disabled="selectedPlaces.length === 0"
       @click="handleClick"
       class="ml-auto cursor-pointer flex items-center relative opacity-40 hover:opacity-100 disabled:pointer-events-none"
     >
       <img class="w-4 sm:w-5" src="/cart.svg" alt="Корзина" />
       <span class="absolute -right-1 top-1 w-3 h-3 bg-orange-300 rounded-lg text-xxs text-center">{{
-        chosenPlaces.length
+        selectedPlaces.length
       }}</span>
     </button>
     <a

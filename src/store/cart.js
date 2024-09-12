@@ -4,6 +4,14 @@ import axios from 'axios'
 import { API_URL, HIGH_PRICE, LOW_PRICE } from '@/utils/constants'
 
 export const useCartStore = defineStore('cart', () => {
+  //film
+
+  const chosenFilm = ref(null)
+
+  function setChosenFilm(value) {
+    chosenFilm.value = value
+  }
+
   //sections
 
   const section = ref('time')
@@ -31,9 +39,15 @@ export const useCartStore = defineStore('cart', () => {
 
   //time
 
-  const chosenTime = computed(() => {
+  const timeData = ref([])
+
+  function setTimeData(value) {
+    timeData.value = value
+  }
+
+  const selectedTime = computed(() => {
     let data = {}
-    sessions.value.forEach((date) => {
+    timeData.value.forEach((date) => {
       const time = date.times.find((time) => time.selected)
       if (time) {
         data = { date: date.date, time: time.time }
@@ -44,6 +58,12 @@ export const useCartStore = defineStore('cart', () => {
 
   //place
 
+  const placesData = ref([])
+
+  function setPlacesData(value) {
+    placesData.value = value
+  }
+
   function setPrice(row, place) {
     if (row > 1 && row < 5 && place > 3 && place < 8) {
       return HIGH_PRICE
@@ -52,38 +72,37 @@ export const useCartStore = defineStore('cart', () => {
     }
   }
 
-  const chosenPlaces = computed(() => {
+  const selectedPlaces = computed(() => {
     let data = []
-    sessions.value.forEach((item) => {
-      if (item.date === chosenTime.value.date) {
-        item.times.forEach((item) => {
-          if (item.time === chosenTime.value.time) {
-            item.rows.forEach((row) => {
-              const places = row.places.filter((item) => item.selected)
-              if (places.length > 0) {
-                places.forEach((place) =>
-                  data.push({
-                    row: row.row,
-                    place: place.place,
-                    price: setPrice(row.row, place.place)
-                  })
-                )
-              }
-            })
-          }
-        })
+    placesData.value.forEach((row) => {
+      const places = row.places.filter((item) => item.selected)
+      if (places.length > 0) {
+        places.forEach((place) =>
+          data.push({
+            row: row.row,
+            place: place.place,
+            price: setPrice(row.row, place.place)
+          })
+        )
       }
     })
+
     return data
   })
 
   return {
+    chosenFilm,
+    setChosenFilm,
     section,
     setSection,
     sessions,
     setSessions,
     getSessions,
-    chosenTime,
-    chosenPlaces
+    timeData,
+    setTimeData,
+    selectedTime,
+    placesData,
+    setPlacesData,
+    selectedPlaces
   }
 })

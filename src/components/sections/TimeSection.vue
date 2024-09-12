@@ -1,18 +1,19 @@
 <script setup>
-import { useTimeChoice } from '@/composables/useTimeChoice'
 import AppMovieInfo from '@/components/AppMovieInfo.vue'
 import UICartContent from '@/components/UI/UICartContent.vue'
 
 defineProps({
   chosenFilm: Object,
-  sessions: Array
+  timeData: Array,
+  timeError: String,
+  isTimeButtonDisabled: Boolean
 })
 
-const { handleChooseTime, error, isButtonDisabled } = useTimeChoice()
+defineEmits(['chooseTime'])
 </script>
 
 <template>
-  <UICartContent next-section="place" :error :is-button-disabled>
+  <UICartContent next-section="place" :error="timeError" :is-button-disabled="isTimeButtonDisabled">
     <template #info>
       <AppMovieInfo
         :rating="chosenFilm.rating"
@@ -24,13 +25,13 @@ const { handleChooseTime, error, isButtonDisabled } = useTimeChoice()
     <template #desc>{{ chosenFilm.shortDescription }}</template>
     <template #main>
       <ul class="flex gap-5 overflow-x-auto justify-center sm:justify-start grow items-end mb-5">
-        <li v-for="date in sessions" :key="date.id" class="flex flex-col gap-3">
+        <li v-for="date in timeData" :key="date.id" class="flex flex-col gap-3">
           <p class="text-center text-xs">{{ date.date }}</p>
           <ul class="time">
             <li
               v-for="time in date.times"
               :key="time"
-              @click="handleChooseTime($event)"
+              @click="$emit('chooseTime', $event)"
               :class="{ selected: time.selected }"
               class="py-1 px-6 bg-slate-600 rounded-lg text-xs cursor-pointer hover:bg-slate-500 hover:-translate-y-0.5 transition active:bg-slate-400"
             >

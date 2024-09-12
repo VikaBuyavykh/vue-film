@@ -7,7 +7,7 @@ export const useFilmStore = defineStore('film', () => {
   const films = ref([])
   const page = ref(1)
   const pagesNumber = ref(0)
-  const chosenFilm = ref({})
+  const observedFilm = ref({})
 
   async function getFilms(page) {
     try {
@@ -23,15 +23,15 @@ export const useFilmStore = defineStore('film', () => {
     page.value = value
   }
 
-  function setChosenFilm(id) {
-    chosenFilm.value = films.value.find((film) => film.id == id)
+  function setObservedFilm(id) {
+    observedFilm.value = films.value.find((film) => film.id == id)
   }
 
   return {
+    observedFilm,
+    setObservedFilm,
     films,
     getFilms,
-    chosenFilm,
-    setChosenFilm,
     page,
     setPage,
     pagesNumber

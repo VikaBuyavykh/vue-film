@@ -6,10 +6,15 @@ const props = defineProps({
   title: String,
   imageUrl: String,
   smallImageUrl: String,
-  chosenFilm: Object
+  observedFilm: Object
 })
 
-defineEmits(['setChosenFilm'])
+const emit = defineEmits(['setObservedFilm'])
+
+function handleClick() {
+  emit('setObservedFilm', props.id)
+  localStorage.setItem('observedFilmId', props.id)
+}
 
 const imagePath = computed(
   () => new URL(`/src/assets/images/${props.imageUrl}`, import.meta.url).href
@@ -23,8 +28,8 @@ const smallImagePath = computed(
   <li>
     <button
       :id
-      @click="$emit('setChosenFilm', id)"
-      :class="{ selected: id === chosenFilm.id }"
+      @click="handleClick"
+      :class="{ selected: id === observedFilm.id }"
       class="w-full h-24 bg-slate-700 hover:bg-slate-600 hover:scale-95 active:bg-slate-500 rounded-2xl text-white flex gap-3 items-center overflow-hidden cursor-pointer transition"
     >
       <picture class="w-20 h-full relative">

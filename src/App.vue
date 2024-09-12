@@ -2,73 +2,134 @@
 import { onMounted, ref, watch, toRefs } from 'vue'
 import { useFilmStore } from '@/store/film'
 import { useCartStore } from '@/store/cart'
+import { useTimeChoice } from '@/composables/useTimeChoice'
+import { usePlaceChoice } from '@/composables/usePlaceChoice'
 import AppHeader from '@/components/AppHeader.vue'
 import AppCover from '@/components/AppCover.vue'
 import AppCards from '@/components/AppCards.vue'
 import AppCart from '@/components/AppCart.vue'
+import AppDialog from '@/components/AppDialog.vue'
+
+//dialog
+
+const dialog = ref()
+
+function openDialog() {
+  dialog.value.openDialog()
+}
 
 //drawer
 
-const isDrawerOpen = ref(false)
+const isCartOpen = ref(false)
 
-function handleDrawer() {
-  isDrawerOpen.value = !isDrawerOpen.value
+function handleCart() {
+  isCartOpen.value = !isCartOpen.value
 }
 
-//film
+//stores stuff
 
-const { films, chosenFilm, page, pagesNumber } = toRefs(useFilmStore())
-const { getFilms, setChosenFilm, setPage } = useFilmStore()
+const { observedFilm, films, page, pagesNumber } = toRefs(useFilmStore())
+const { getFilms, setPage, setObservedFilm } = useFilmStore()
+const { chosenFilm, section, sessions } = toRefs(useCartStore())
+const { setChosenFilm, getSessions, setSection } = useCartStore()
+
+//composables stuff
+
+const { timeData, setTimeData, chooseTime, timeError, isTimeButtonDisabled } = useTimeChoice()
+const {
+  placesData,
+  setPlacesData,
+  selectedTime,
+  choosePlace,
+  placesError,
+  isPlacesButtonDisabled,
+  selectedPlacesText
+} = usePlaceChoice()
+
+//other stuff
 
 watch(page, async () => {
   await getFilms(page.value)
 })
 
-onMounted(async () => {
-  await getFilms(page.value)
-  setChosenFilm(1)
+watch(isCartOpen, () => {
+  if (isCartOpen.value) {
+    if (!chosenFilm.value) {
+      setChosenFilm(observedFilm.value)
+      localStorage.setItem('chosenFilm', JSON.stringify(chosenFilm.value))
+    }
+  }
 })
 
-//sessions
-
-const { section, sessions, chosenTime } = toRefs(useCartStore())
-const { getSessions, setSessions, setSection } = useCartStore()
-
 onMounted(async () => {
-  const savedSessions = JSON.parse(localStorage.getItem('sessions'))
-  if (savedSessions) {
-    setSessions(savedSessions)
+  const savedPage = JSON.parse(localStorage.getItem('page'))
+  if (savedPage) {
+    setPage(savedPage)
   } else {
-    await getSessions()
-    localStorage.setItem('sessions', JSON.stringify(sessions.value))
+    setPage(1)
+  }
+
+  await getFilms(page.value)
+  await getSessions()
+
+  const savedObservedFilmId = JSON.parse(localStorage.getItem('observedFilmId'))
+  if (savedObservedFilmId) {
+    setObservedFilm(savedObservedFilmId)
+  } else {
+    setObservedFilm(1)
+    localStorage.setItem('observedFilmId', 1)
+  }
+
+  const savedChosenFilm = JSON.parse(localStorage.getItem('chosenFilm'))
+  if (savedChosenFilm) {
+    setChosenFilm(savedChosenFilm)
   }
 })
 </script>
 
 <template>
   <div class="flex flex-col">
-    <AppHeader @on-open="handleDrawer" />
+    <AppHeader @on-open="handleCart" />
     <main>
-      <AppCover :chosen-film @on-click-open="handleDrawer" />
+      <AppCover :observed-film :chosen-film @on-click-open="handleCart" @open-dialog="openDialog" />
       <AppCards
         :films
         :pages-number
         :page
-        :chosen-film
+        :observed-film
         @set-page="setPage"
-        @set-chosen-film="setChosenFilm"
+        @set-observed-film="setObservedFilm"
       />
       <transition name="fade">
         <AppCart
-          v-if="isDrawerOpen"
-          :section
+          v-if="isCartOpen"
           :sessions
+          :section
           :chosen-film
-          :chosen-time
-          @on-close="handleDrawer"
+          :time-data
+          :time-error
+          :is-time-button-disabled
+          :places-data
+          :selected-time
+          :places-error
+          :is-places-button-disabled
+          :selected-places-text
+          @set-places-data="setPlacesData"
+          @choose-time="chooseTime"
+          @choose-place="choosePlace"
+          @on-close="handleCart"
           @set-section="setSection"
         />
       </transition>
+      <AppDialog
+        ref="dialog"
+        :chosen-film
+        :observed-film
+        :sessions
+        @set-chosen-film="setChosenFilm"
+        @set-time-data="setTimeData"
+        @set-places-data="setPlacesData"
+      />
     </main>
   </div>
 </template>
