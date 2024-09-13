@@ -40,11 +40,11 @@ onUnmounted(() => emit('setSection', 'time'))
   >
     <div
       @click.stop
-      class="p-8 flex flex-col gap-10 sm:gap-3 text-white cursor-default relative w-full h-full max-w-96 max-h-650 sm:w-3/4 sm:max-w-xl sm:h-5/6 sm:max-h-full md:w-2/3 lg:w-1/2 lg:max-w-2xl bg-slate-700 opacity-1 rounded-3xl"
+      class="p-4 sm:p-8 flex flex-col gap-10 sm:gap-3 text-white cursor-default relative w-full h-full max-w-96 max-h-650 sm:w-3/4 sm:max-w-xl sm:h-5/6 sm:max-h-full md:w-2/3 lg:w-1/2 lg:max-w-2xl bg-slate-700 opacity-1 rounded-3xl"
     >
       <img
         @click="$emit('onClose')"
-        class="absolute top-4 right-4 w-6 md:w-8 cursor-pointer hover:opacity-40 transition"
+        class="absolute top-3 sm:top-4 right-3 sm:right-4 w-6 sm:w-8 cursor-pointer hover:opacity-40 transition"
         src="/close.svg"
         alt="Иконка закрытия"
       />

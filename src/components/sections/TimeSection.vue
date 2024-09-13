@@ -42,7 +42,9 @@ onMounted(() => {
     <template #title>{{ chosenFilm.title }}</template>
     <template #desc>{{ chosenFilm.shortDescription }}</template>
     <template #main>
-      <ul class="flex gap-5 overflow-x-auto justify-center sm:justify-start grow items-end mb-5">
+      <ul
+        class="flex gap-2 sm:gap-5 overflow-x-auto justify-center sm:justify-start grow items-end mb-5"
+      >
         <li v-for="date in timeData" :key="date.id" class="flex flex-col gap-3">
           <p class="text-center text-xs">{{ date.date }}</p>
           <ul class="time">

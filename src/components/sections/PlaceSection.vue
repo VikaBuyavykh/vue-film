@@ -62,16 +62,26 @@ onMounted(() => {
     >
     <template #button>Далее</template>
     <template #main>
-      <div class="flex flex-col gap-3 overflow-x-auto scrollbar-horizontal grow justify-end mb-5">
+      <div
+        class="flex flex-col items-center gap-3 overflow-x-auto scrollbar-horizontal grow justify-end mb-5"
+      >
         <div class="flex justify-start ml-10 gap-3">
           <span class="h-5 px-4 flex items-center text-center bg-slate-600 text-xs">350 руб.</span>
           <span class="h-5 px-4 flex items-center text-center highPriced text-xs">450 руб.</span>
         </div>
-        <div class="bg-slate-900 w-392 h-6 text-center rounded-xl text-xs pt-1 ml-10">Экран</div>
-        <ul class="flex flex-col gap-3">
-          <li v-for="row in highPriceFilter(placesData)" :key="row.row" class="flex flex-row gap-2">
-            <span class="text-xs mt-1 mr-1 text-nowrap">Ряд {{ row.row }}</span>
-            <div class="place">
+        <div
+          class="bg-slate-900 w-52 w-392 h-4 sm:h-5 flex justify-center items-center text-center rounded-xl text-xs ml-10"
+        >
+          Экран
+        </div>
+        <ul class="flex flex-col items-center gap-1 sm:gap-3">
+          <li
+            v-for="row in highPriceFilter(placesData)"
+            :key="row.row"
+            class="flex flex-row gap-1 sm:gap-2 items-center"
+          >
+            <span class="text-xs text-nowrap">Ряд {{ row.row }}</span>
+            <div class="grid grid-cols-10 gap-1 sm:gap-2">
               <button
                 type="button"
                 @click="$emit('choosePlace', $event)"
@@ -79,7 +89,7 @@ onMounted(() => {
                 :key="place.place"
                 :disabled="place.isOccupied"
                 :class="{ selected: place.selected, highPriced: place.highPriced }"
-                class="h-6 w-8 text-center bg-slate-600 rounded-xl text-xs cursor-pointer hover:bg-slate-500 hover:-translate-y-0.5 transition active:bg-slate-400 disabled:opacity-20 disabled:cursor-default disabled:translate-y-0"
+                class="h-5 sm:h-6 w-5 sm:w-8 text-center bg-slate-600 rounded-xl text-xs cursor-pointer hover:bg-slate-500 hover:-translate-y-0.5 transition active:bg-slate-400 disabled:opacity-20 disabled:cursor-default disabled:translate-y-0"
               >
                 {{ place.place }}
               </button>
@@ -98,8 +108,10 @@ onMounted(() => {
   gap: 8px;
 }
 
-.w-392 {
-  width: 392px;
+@media screen and (min-width: 640px) {
+  .w-392 {
+    width: 392px;
+  }
 }
 
 .selected {
