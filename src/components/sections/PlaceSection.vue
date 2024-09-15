@@ -28,8 +28,6 @@ function highPriceFilter(places) {
 }
 
 onMounted(() => {
-  console.log(highPriceFilter(props.placesData))
-
   const savedPlacesData = JSON.parse(localStorage.getItem('placesData'))
   if (savedPlacesData) {
     emit('setPlacesData', savedPlacesData)

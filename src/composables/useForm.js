@@ -5,7 +5,7 @@ import { API_URL } from '@/utils/constants'
 
 export function useForm(chosenFilm) {
   const { sessions, selectedTime, selectedPlaces, placesData } = toRefs(useCartStore())
-  const { setSessions, setSection, setChosenFilm } = useCartStore()
+  const { setSessions, setSection, setChosenFilm, setPlacesData } = useCartStore()
 
   const email = ref('')
   const tel = ref('')
@@ -49,6 +49,7 @@ export function useForm(chosenFilm) {
       await axios.patch(`${API_URL}/sessions`, updatedSessions)
       setSessions(updatedSessions)
       setChosenFilm(null)
+      setPlacesData([])
       localStorage.removeItem('chosenFilm')
       localStorage.removeItem('timeData')
       localStorage.removeItem('placesData')
